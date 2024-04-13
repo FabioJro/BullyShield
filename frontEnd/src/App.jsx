@@ -1,12 +1,15 @@
 import "./App.css";
-import Navbar from "./Components/Navbar/index.jsx"
-import CardLogin from "./Components/CardLogin";
+import Home from "./Pages/Home"
+
 
 
 function App() {
   return (
     
-      <Navbar />
+    <div>
+      <Home />
+    </div>
+     
     
   );
 }
