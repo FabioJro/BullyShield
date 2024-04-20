@@ -23,6 +23,6 @@ public class Team {
     private double teamGlbAvg;
     @Column(name = "t_fqc_avg")
     private int teamFqcAvg;
-    @OneToMany(mappedBy = "studentTeam", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "studentTeam")
     private Set<Student> students;
 }
