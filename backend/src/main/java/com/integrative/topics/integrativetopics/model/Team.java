@@ -13,7 +13,7 @@ import java.util.Set;
 @EqualsAndHashCode(of = "teamName")
 public class Team {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long teamId;
     @Column(name = "t_name")
     private String teamName;
