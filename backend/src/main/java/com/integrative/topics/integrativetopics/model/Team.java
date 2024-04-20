@@ -13,7 +13,7 @@ import java.util.Set;
 @EqualsAndHashCode(of = "teamName")
 public class Team {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long teamId;
     @Column(name = "t_name")
     private String teamName;
@@ -23,6 +23,6 @@ public class Team {
     private double teamGlbAvg;
     @Column(name = "t_fqc_avg")
     private int teamFqcAvg;
-    @OneToMany(mappedBy = "studentTeam", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "studentTeam")
     private Set<Student> students;
 }
