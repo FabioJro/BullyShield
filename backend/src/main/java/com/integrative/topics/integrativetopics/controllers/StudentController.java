@@ -33,7 +33,7 @@ public class StudentController {
                 .matching()
                 .withIgnoreCase()
                 .withStringMatcher( ExampleMatcher.StringMatcher.CONTAINING);
-        Example example = Example.of(filter, matcher);
+        Example<Student> example = Example.of(filter, matcher);
         return students.findAll();
     }
 
@@ -53,5 +53,16 @@ public class StudentController {
                         new ResponseStatusException(HttpStatus.NOT_FOUND, "Not found."));
     }
 
-    
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void update(@PathVariable Long id, @RequestBody Student student){
+        students.findById(id)
+                .map(studentExist -> {
+                    student.setStudentId(studentExist.getStudentId());
+                    students.save(student);
+                    return studentExist;
+                }).orElseThrow(()->
+                        new ResponseStatusException(HttpStatus.NOT_FOUND));
+    }
+
 }
