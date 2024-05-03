@@ -1,0 +1,43 @@
+.bodyNavbar {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130vh;
+  background-color: #bf8a21;
+  border-radius: 2.2rem;
+  height: 5rem;
+}
+
+.bodyItens {
+  width: 90%;
+}
+
+.containerNavbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.containerItens {
+  display: flex;
+  gap: 5rem;
+  list-style-type: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  height: 4rem;
+}

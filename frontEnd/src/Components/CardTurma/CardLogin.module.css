@@ -1,0 +1,77 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.sectionCard{
+    background-color: #FFC34D;
+    height: 80vh;
+    width: 65%;
+    border-radius: 74px;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputFindTurma{
+    width: 25%;
+    border: none;
+    height: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    outline: none;
+}
+.bodyCard{
+    height:90%;
+    width: 90%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.card{
+    height:20rem;
+    width: 18rem;
+    border-radius: 9px;
+
+}
+.bodyCardTurma{
+    width:100%;
+    height:80%;
+    background-color: #fff;
+    border-radius: 9px 9px 0 0;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+.tilteCardTurma{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+.detailsCardTurma{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.footerCard{
+    background-color: #FBA700;
+    border-radius: 7px;
+    width: 100%;
+    height: 20%;
+    border-radius:  0 0 9px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.tilteCard{
+    letter-spacing: 5px;
+}
