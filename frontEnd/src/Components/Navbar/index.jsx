@@ -1,7 +1,7 @@
 import React from "react";
 
 import Style from "./navbar.module.css";
-import logo from "/public/logo.svg"
+import logo from "/Logo.svg"
 
 const index = () => {
   const menuNav = ["Inicio", "Sobre", "Mais"];
