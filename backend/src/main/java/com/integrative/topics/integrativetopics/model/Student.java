@@ -1,5 +1,6 @@
 package com.integrative.topics.integrativetopics.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import jakarta.persistence.*;
 

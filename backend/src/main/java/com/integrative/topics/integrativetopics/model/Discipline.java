@@ -1,5 +1,6 @@
 package com.integrative.topics.integrativetopics.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,9 +27,9 @@ public class Discipline {
     @JoinColumn(name = "professor_id")
     private Professor professor;
 
+    @JsonIgnore
     @OneToOne
     @JoinColumn(name = "discipline_team")
     private Team disciplinesTeam;
-
 
 }
