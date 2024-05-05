@@ -1,7 +1,11 @@
 package com.integrative.topics.integrativetopics.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+
+
+import java.util.HashSet;
 import java.util.Set;
 
 
@@ -23,6 +27,14 @@ public class Team {
     private double teamGlbAvg;
     @Column(name = "t_fqc_avg")
     private int teamFqcAvg;
+
     @OneToMany(mappedBy = "studentTeam")
-    private Set<Student> students;
+    private Set<Student> students = new HashSet<>();
+
+    @OneToMany(mappedBy = "disciplinesTeam")
+    private Set<Discipline> disciplines = new HashSet<>();
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "teams")
+    private Set<Professor> professors = new HashSet<>();
 }
