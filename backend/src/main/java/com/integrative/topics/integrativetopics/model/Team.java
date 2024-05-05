@@ -34,7 +34,7 @@ public class Team {
     @OneToMany(mappedBy = "disciplinesTeam")
     private Set<Discipline> disciplines = new HashSet<>();
 
-    @JsonIgnore
-    @ManyToMany(mappedBy = "teams")
-    private Set<Professor> professors = new HashSet<>();
+//    @JsonIgnore
+//    @ManyToMany(mappedBy = "teams")
+//    private Set<Professor> professors = new HashSet<>();
 }

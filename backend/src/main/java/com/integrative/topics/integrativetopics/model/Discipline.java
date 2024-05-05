@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 
 @Entity
 @Data
@@ -31,5 +33,9 @@ public class Discipline {
     @OneToOne
     @JoinColumn(name = "discipline_team")
     private Team disciplinesTeam;
+
+
+    @ManyToMany(mappedBy = "disciplines")
+    private Set<Student> students;
 
 }

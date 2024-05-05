@@ -1,14 +1,14 @@
 package com.integrative.topics.integrativetopics.controllers;
 
+import com.integrative.topics.integrativetopics.dto.ListTeamDto;
+import com.integrative.topics.integrativetopics.model.Professor;
 import com.integrative.topics.integrativetopics.model.Team;
 import com.integrative.topics.integrativetopics.services.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -23,5 +23,12 @@ public class TeamController {
         Optional<Team> obj = service.findById(id);
         return ResponseEntity.ok().body(obj);
     }
+
+    @GetMapping("/teste")
+    public ResponseEntity<List <ListTeamDto>> lisTeams(@RequestBody Professor prof){
+        return ResponseEntity.ok(service.listTeamDto(prof));
+    }
+
+
 
 }
