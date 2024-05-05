@@ -1,5 +1,6 @@
 package com.integrative.topics.integrativetopics.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,12 +23,14 @@ public class Discipline {
     @Column(name = "d_avg")
     private Double disciplineAverage;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL ,fetch = FetchType.LAZY)
     @JoinColumn(name = "professor_id")
+    @JsonIgnore
     private Professor professor;
 
     @OneToOne
     @JoinColumn(name = "discipline_team")
+    @JsonIgnore
     private Team disciplinesTeam;
 
 
