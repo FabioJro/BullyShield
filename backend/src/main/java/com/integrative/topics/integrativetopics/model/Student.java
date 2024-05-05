@@ -23,6 +23,7 @@ public class Student {
     private String studentEnrollment;
     @Column(name = "s_fqc")
     private Integer studentFqc;
+
     @ManyToOne
     @JoinColumn(name = "team_id")
     private Team studentTeam;
