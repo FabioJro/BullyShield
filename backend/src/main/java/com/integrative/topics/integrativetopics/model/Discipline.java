@@ -1,10 +1,14 @@
 package com.integrative.topics.integrativetopics.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -26,9 +30,11 @@ public class Discipline {
     @JoinColumn(name = "professor_id")
     private Professor professor;
 
-    @OneToOne
-    @JoinColumn(name = "discipline_team")
-    private Team disciplinesTeam;
+//    @OneToOne
+//    @JoinColumn(name = "discipline_team")
+//    private Team disciplinesTeam;
 
-
+    @JsonIgnore
+    @ManyToMany(mappedBy = "disciplines")
+    private Set<Student> students = new HashSet<>();
 }

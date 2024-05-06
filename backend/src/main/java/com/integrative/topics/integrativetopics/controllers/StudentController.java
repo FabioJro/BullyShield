@@ -28,12 +28,7 @@ public class StudentController {
     }
 
     @GetMapping
-    public List<Student> findAll(Student filter){
-        ExampleMatcher matcher = ExampleMatcher
-                .matching()
-                .withIgnoreCase()
-                .withStringMatcher( ExampleMatcher.StringMatcher.CONTAINING);
-        Example<Student> example = Example.of(filter, matcher);
+    public List<Student> findAll(){
         return students.findAll();
     }
 

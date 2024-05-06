@@ -1,5 +1,6 @@
 package com.integrative.topics.integrativetopics.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,6 +21,10 @@ public class Professor {
     @Column(name = "p_name")
     private String nome;
 
+    @Column(name = "p_email")
+    private String email;
+
+    @JsonIgnore
     @OneToMany(mappedBy = "professor", fetch = FetchType.LAZY, cascade=CascadeType.ALL)
     private Set<Discipline> disciplines = new HashSet<>();
 
@@ -28,5 +33,6 @@ public class Professor {
     joinColumns = @JoinColumn(name = "professor_id"),
     inverseJoinColumns = @JoinColumn(name = "team_id"))
     private Set<Team> teams = new HashSet<>();
+
 
 }

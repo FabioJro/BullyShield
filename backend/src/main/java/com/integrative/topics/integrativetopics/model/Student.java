@@ -1,7 +1,11 @@
 package com.integrative.topics.integrativetopics.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import jakarta.persistence.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Getter
@@ -24,8 +28,15 @@ public class Student {
     @Column(name = "s_fqc")
     private Integer studentFqc;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "team_id")
     private Team studentTeam;
+
+    @ManyToMany
+    @JoinTable(name = "student_discipline",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "discipline_id"))
+    private Set<Discipline> disciplines = new HashSet<>();
 
 }

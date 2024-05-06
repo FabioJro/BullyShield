@@ -1,5 +1,6 @@
 package com.integrative.topics.integrativetopics.services;
 
+import com.integrative.topics.integrativetopics.dtos.TeamDTO;
 import com.integrative.topics.integrativetopics.model.Team;
 import com.integrative.topics.integrativetopics.repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,4 +17,5 @@ public class TeamService {
     public Optional<Team> findById(Long id){
         return repository.findById(id);
     }
+
 }
