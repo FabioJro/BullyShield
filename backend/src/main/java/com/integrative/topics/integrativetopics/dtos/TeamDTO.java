@@ -17,6 +17,12 @@ public class TeamDTO {
     private Double teamGlbAvg;
     private Integer teamFqcAvg;
 
+    public TeamDTO(Team team){
+        this.teamName = team.getTeamName();
+        this.teamGlbAvg = team.getTeamGlbAvg();
+        this.teamFqcAvg = team.getTeamFqcAvg();
+    }
+
     public static TeamDTO turnIntoDTO(Optional<Team> t){
         return new TeamDTO();
     }

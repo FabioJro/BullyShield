@@ -1,11 +1,14 @@
 package com.integrative.topics.integrativetopics.dtos;
 
+import com.integrative.topics.integrativetopics.model.Professor;
 import com.integrative.topics.integrativetopics.model.Team;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.Collections;
+import java.util.Optional;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,5 +17,14 @@ public class ProfessorDTO {
 
     private String name;
     private String email;
-    private List<TeamDTO> teams;
+    private Set<TeamDTO> teams;
+
+    public ProfessorDTO(Professor prof){
+        this.name = prof.getNome();
+        this.email = prof.getEmail();
+        for (Team t: prof.getTeams()){
+            this.teams = Collections.singleton(TeamDTO.turnIntoDTO(Optional.ofNullable(t)));
+        }
+
+    }
 }
