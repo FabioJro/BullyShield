@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   width: 130vh;
-  background-color: #bf8a21;
+  background-color: #FBA700;
   border-radius: 2.2rem;
   height: 5rem;
 }
@@ -40,4 +40,10 @@
 
 .image {
   height: 4rem;
+}
+
+.link{
+
+  text-decoration: none;
+  color: black;
 }
