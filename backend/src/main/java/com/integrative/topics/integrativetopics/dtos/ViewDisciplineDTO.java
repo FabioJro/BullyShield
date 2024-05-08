@@ -1,9 +1,14 @@
 package com.integrative.topics.integrativetopics.dtos;
 
 import com.integrative.topics.integrativetopics.model.Discipline;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
 public class ViewDisciplineDTO {
 
     private Long disciplineId;
@@ -14,6 +19,8 @@ public class ViewDisciplineDTO {
     private String belowAvgStudents;
     private String numberOfStudents;
     private String professorName;
+
+    private Set<ViewStudentDTO> studentDTOS = new HashSet<>();
 
 
 
@@ -28,6 +35,8 @@ public class ViewDisciplineDTO {
         this.aboveAvgStudents = calculateAboveAverageStudents(students);
         this.belowAvgStudents = calculateBelowAverageStudents(students);
         this.numberOfStudents = calculateNumberOfStudents(students);
+
+        this.studentDTOS = students;
     }
 
     protected String calculateAboveAverageStudents(Set<ViewStudentDTO> students){

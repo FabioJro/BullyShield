@@ -13,6 +13,7 @@ import java.util.Optional;
 @Data
 public class TeamDTO {
 
+    private Long teamId;
     private String teamName;
     private Double teamGlbAvg;
     private Integer teamFqcAvg;

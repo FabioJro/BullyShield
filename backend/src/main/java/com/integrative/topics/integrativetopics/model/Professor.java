@@ -21,7 +21,7 @@ public class Professor {
     @Column(name = "prof_name")
     private String nome;
 
-    @Column(name = "prof_enrollment")
+    @Column(name = "prof_enrollment", unique = true)
     private String enrollment;
 
     @OneToMany(mappedBy = "professor", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
