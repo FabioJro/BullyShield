@@ -1,4 +1,4 @@
-package com.integrative.topics.integrativetopics.dtos;
+package com.integrative.topics.integrativetopics.dtos.views;
 
 import com.integrative.topics.integrativetopics.model.Discipline;
 import lombok.Getter;
@@ -20,16 +20,16 @@ public class ViewDisciplineDTO {
     private String belowAvgStudents;
     private String numberOfStudents;
     private String professorName;
-    private Set<ViewStudentDTO> studentDTOS = new HashSet<>();
+    private Set<ViewStudentRecordDTO> studentDTOS = new HashSet<>();
 
 
     public ViewDisciplineDTO(Discipline discipline) {
         this(discipline, discipline.getStudents().stream()
-                .map(ViewStudentDTO::new)
+                .map(ViewStudentRecordDTO::new)
                 .collect(Collectors.toSet()));
     }
 
-    public ViewDisciplineDTO(Discipline discipline, Set<ViewStudentDTO> students) {
+    public ViewDisciplineDTO(Discipline discipline, Set<ViewStudentRecordDTO> students) {
         initialize(discipline);
         processStudents(students);
     }
@@ -42,7 +42,7 @@ public class ViewDisciplineDTO {
         this.frequencyAvg = String.valueOf(discipline.getFrequencyAverage());
     }
 
-    private void processStudents(Set<ViewStudentDTO> students) {
+    private void processStudents(Set<ViewStudentRecordDTO> students) {
         this.studentDTOS = students;
         this.aboveAvgStudents = calculateAboveAverageStudents(students);
         this.belowAvgStudents = calculateBelowAverageStudents(students);
@@ -51,11 +51,11 @@ public class ViewDisciplineDTO {
 
 
 
-    protected String calculateAboveAverageStudents(Set<ViewStudentDTO> students){
+    protected String calculateAboveAverageStudents(Set<ViewStudentRecordDTO> students){
         int aboveAvgStudents = 0;
 
-        for (ViewStudentDTO student : students){
-            double studentGradeAvg = Double.parseDouble( student.getStudentGradeAvg() );
+        for (ViewStudentRecordDTO student : students){
+            double studentGradeAvg = Double.parseDouble( student.getStudentGrade() );
             if ( studentGradeAvg >= 7 ){
                 aboveAvgStudents++;
             }
@@ -64,11 +64,11 @@ public class ViewDisciplineDTO {
         return String.valueOf( aboveAvgStudents );
     }
 
-    protected String calculateBelowAverageStudents(Set<ViewStudentDTO> students){
+    protected String calculateBelowAverageStudents(Set<ViewStudentRecordDTO> students){
         int belowAvgStudents = 0;
 
-        for (ViewStudentDTO student : students){
-            double studentGradeAvg = Double.parseDouble( student.getStudentGradeAvg() );
+        for (ViewStudentRecordDTO student : students){
+            double studentGradeAvg = Double.parseDouble( student.getStudentGrade() );
             if ( studentGradeAvg < 7 ){
                 belowAvgStudents++;
             }
@@ -77,7 +77,7 @@ public class ViewDisciplineDTO {
         return String.valueOf( belowAvgStudents );
     }
 
-    protected String calculateNumberOfStudents(Set<ViewStudentDTO> students){
+    protected String calculateNumberOfStudents(Set<ViewStudentRecordDTO> students){
         return String.valueOf( students.size() );
     }
 }

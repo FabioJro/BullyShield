@@ -1,4 +1,4 @@
-package com.integrative.topics.integrativetopics.dtos;
+package com.integrative.topics.integrativetopics.dtos.views;
 
 import com.integrative.topics.integrativetopics.model.Team;
 import lombok.AccessLevel;

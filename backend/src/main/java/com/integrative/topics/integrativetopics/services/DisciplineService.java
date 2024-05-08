@@ -1,8 +1,8 @@
 package com.integrative.topics.integrativetopics.services;
 
-import com.integrative.topics.integrativetopics.dtos.ViewDisciplineDTO;
-import com.integrative.topics.integrativetopics.dtos.ViewListOfDisciplinesDTO;
-import com.integrative.topics.integrativetopics.dtos.ViewStudentDTO;
+import com.integrative.topics.integrativetopics.dtos.views.ViewDisciplineDTO;
+import com.integrative.topics.integrativetopics.dtos.views.ViewListOfDisciplinesDTO;
+import com.integrative.topics.integrativetopics.dtos.views.ViewStudentRecordDTO;
 import com.integrative.topics.integrativetopics.model.Discipline;
 import com.integrative.topics.integrativetopics.model.Professor;
 import com.integrative.topics.integrativetopics.repository.DisciplineRepository;
@@ -35,8 +35,8 @@ public class DisciplineService {
     public ViewDisciplineDTO showInfoDisciplineBy(Long disciplineId){
         Discipline discipline = findDisciplineById( disciplineId );
 
-        Set<ViewStudentDTO> enrolledStudentsDTO = discipline.getStudents().stream()
-                .map( ViewStudentDTO::new )
+        Set<ViewStudentRecordDTO> enrolledStudentsDTO = discipline.getStudents().stream()
+                .map( ViewStudentRecordDTO::new )
                 .collect(Collectors.toSet());
 
         ViewDisciplineDTO viewDisciplineDTO = new  ViewDisciplineDTO( discipline, enrolledStudentsDTO );

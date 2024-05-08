@@ -32,6 +32,7 @@ public class Discipline {
     private Double frequencyAverage;
 
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "disciplines")
     private Set<Team> teams = new HashSet<>();
 
@@ -40,9 +41,11 @@ public class Discipline {
     @JoinColumn(name = "professor_id")
     private Professor professor;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "disciplines")
     private Set<Student> students = new HashSet<>();
 
+    @JsonIgnore
     @OneToMany(mappedBy = "discipline", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Set<DisciplineStudentInfo> disciplineStudentInfo;
 }

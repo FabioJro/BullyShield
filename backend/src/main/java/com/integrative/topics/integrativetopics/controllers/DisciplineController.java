@@ -1,7 +1,7 @@
 package com.integrative.topics.integrativetopics.controllers;
 
-import com.integrative.topics.integrativetopics.dtos.ViewDisciplineDTO;
-import com.integrative.topics.integrativetopics.dtos.ViewListOfDisciplinesDTO;
+import com.integrative.topics.integrativetopics.dtos.views.ViewDisciplineDTO;
+import com.integrative.topics.integrativetopics.dtos.views.ViewListOfDisciplinesDTO;
 import com.integrative.topics.integrativetopics.services.DisciplineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

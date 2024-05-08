@@ -1,4 +1,4 @@
-package com.integrative.topics.integrativetopics.dtos;
+package com.integrative.topics.integrativetopics.dtos.views;
 
 import com.integrative.topics.integrativetopics.model.Discipline;
 import lombok.Getter;
@@ -17,7 +17,7 @@ public class ViewListOfDisciplinesDTO extends ViewDisciplineDTO{
         this.teamName = discipline.getTeams().getClass().getName();
     }
 
-    public ViewListOfDisciplinesDTO(Discipline discipline, Set<ViewStudentDTO> students) {
+    public ViewListOfDisciplinesDTO(Discipline discipline, Set<ViewStudentRecordDTO> students) {
         super(discipline, students);
         this.teamName = discipline.getTeams().getClass().getName();
     }
