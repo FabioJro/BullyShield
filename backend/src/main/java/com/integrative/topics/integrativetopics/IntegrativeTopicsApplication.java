@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class IntegrativeTopicsApplication {
+
 	@Bean
 	public ModelMapper mapper() {
 		return new ModelMapper();

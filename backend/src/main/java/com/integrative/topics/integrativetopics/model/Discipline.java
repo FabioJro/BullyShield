@@ -21,20 +21,28 @@ public class Discipline {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long disciplineId;
-    @Column(name = "d_name")
-    private String name;
-    @Column(name = "d_avg")
-    private Double disciplineAverage;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @Column(name = "disc_name")
+    private String disciplineName;
+
+    @Column(name = "disc_grade_avg")
+    private Double gradeAverage;
+
+    @Column(name = "dis_freq_avg")
+    private Double frequencyAverage;
+
+
+    @ManyToMany(mappedBy = "disciplines")
+    private Set<Team> teams = new HashSet<>();
+
+    @JsonIgnore
+    @ManyToOne
     @JoinColumn(name = "professor_id")
     private Professor professor;
 
-//    @OneToOne
-//    @JoinColumn(name = "discipline_team")
-//    private Team disciplinesTeam;
-
-    @JsonIgnore
     @ManyToMany(mappedBy = "disciplines")
     private Set<Student> students = new HashSet<>();
+
+    @OneToMany(mappedBy = "discipline", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private Set<DisciplineStudentInfo> disciplineStudentInfo;
 }

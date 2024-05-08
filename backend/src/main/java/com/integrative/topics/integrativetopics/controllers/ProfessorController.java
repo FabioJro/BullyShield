@@ -16,11 +16,7 @@ import java.util.List;
 public class ProfessorController {
     private ProfessorService professorService;
 
-    @GetMapping
-    public ResponseEntity<List<ProfessorDTO>> findAll(){
-        List<ProfessorDTO> list = professorService.findAll();
-        return ResponseEntity.ok().body(list);
-    }
+
 
 
 }

@@ -19,12 +19,5 @@ public class ProfessorDTO {
     private String email;
     private Set<TeamDTO> teams;
 
-    public ProfessorDTO(Professor prof){
-        this.name = prof.getNome();
-        this.email = prof.getEmail();
-        for (Team t: prof.getTeams()){
-            this.teams = Collections.singleton(TeamDTO.turnIntoDTO(Optional.ofNullable(t)));
-        }
 
-    }
 }

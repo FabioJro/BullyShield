@@ -19,24 +19,30 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long studentId;
-    @Column(name = "s_name")
+    @Column(name = "student_name")
     private String studentName;
-    @Column(name = "s_avg")
-    private Double studentAvg;
-    @Column(name = "s_enrollment")
+    @Column(name = "student_grade_avg")
+    private Double studentGradeAvg;
+    @Column(name = "student_freq_avg")
+    private Double sutdentFrequencyAvg;
+    @Column(name = "student_enrollment")
     private String studentEnrollment;
-    @Column(name = "s_fqc")
-    private Integer studentFqc;
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "team_id")
-    private Team studentTeam;
+    @JoinColumn(name = "courseId")
+    private Team team;
 
+    @JsonIgnore
     @ManyToMany
-    @JoinTable(name = "student_discipline",
+    @JoinTable(
+            name = "student_discipline",
             joinColumns = @JoinColumn(name = "student_id"),
-            inverseJoinColumns = @JoinColumn(name = "discipline_id"))
+            inverseJoinColumns = @JoinColumn(name = "discipline_id")
+    )
     private Set<Discipline> disciplines = new HashSet<>();
+
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private Set<DisciplineStudentInfo> disciplineStudentInfo;
 
 }
