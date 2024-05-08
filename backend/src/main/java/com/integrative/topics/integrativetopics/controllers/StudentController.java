@@ -1,9 +1,7 @@
 package com.integrative.topics.integrativetopics.controllers;
 
 import com.integrative.topics.integrativetopics.dtos.views.ViewStudentRecordDTO;
-import com.integrative.topics.integrativetopics.repository.StudentRepository;
 import com.integrative.topics.integrativetopics.services.StudentService;
-import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;

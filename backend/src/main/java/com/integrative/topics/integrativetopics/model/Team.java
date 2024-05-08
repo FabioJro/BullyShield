@@ -3,7 +3,7 @@ package com.integrative.topics.integrativetopics.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.web.bind.annotation.CookieValue;
+
 
 import java.util.HashSet;
 import java.util.Set;

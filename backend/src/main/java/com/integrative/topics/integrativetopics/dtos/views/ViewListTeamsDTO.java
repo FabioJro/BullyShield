@@ -1,15 +1,11 @@
 package com.integrative.topics.integrativetopics.dtos.views;
 
 import com.integrative.topics.integrativetopics.model.Team;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.Optional;
+import lombok.*;
 
 
-@Data
+@Getter
+@Setter
 public class ViewListTeamsDTO {
 
     private Long teamId;
