@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+
 import java.util.Set;
 
 @Repository
@@ -17,7 +17,7 @@ public interface TeamRepository extends JpaRepository<Team, Long> {
             "JOIN t.disciplines d " +
             "WHERE d.professor.professorId =: professorId"
     )
-    List<Team> findDistinctTeamsByDisciplinesProfessorId(@Param("professorId") Long professorId);
+    Set<Team> findDistinctTeamsByDisciplinesProfessorId(@Param("professorId") Long professorId);
 
     Set<Discipline> findDisciplinesByTeamId(@Param("teamId") Long teamId);
 }

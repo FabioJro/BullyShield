@@ -28,6 +28,9 @@ public class DisciplineService {
     @Autowired
     private ProfessorService professorService;
 
+    @Autowired
+    private DTOServices dtoService;
+
 
     public ViewDisciplineDTO showInfoDisciplineBy(Long disciplineId){
         Discipline discipline = findDisciplineById( disciplineId );
@@ -47,7 +50,7 @@ public class DisciplineService {
 
         Set<ViewDisciplineDTO> disciplinesDTOS = convertCollectionDisciplinesDTO( disciplines );
 
-        emptyCollectionHandling(Collections.singleton(disciplinesDTOS));
+        dtoService.emptyCollectionHandling(Collections.singleton(disciplinesDTOS));
 
         return disciplinesDTOS;
     }
@@ -57,7 +60,7 @@ public class DisciplineService {
 
         Set<ViewListOfDisciplinesDTO> disciplinesDTOS = convertCollectionDisciplineTeamsDTO( disciplines );
 
-        emptyCollectionHandling(Collections.singleton(disciplinesDTOS));
+        dtoService.emptyCollectionHandling(Collections.singleton(disciplinesDTOS));
 
         return disciplinesDTOS;
     }
@@ -73,7 +76,7 @@ public class DisciplineService {
                 .map( ViewDisciplineDTO::new )
                 .collect(Collectors.toSet());
 
-        emptyCollectionHandling(Collections.singleton(disciplinesDTOS));
+        dtoService.emptyCollectionHandling(Collections.singleton(disciplinesDTOS));
 
         return disciplinesDTOS;
     }
@@ -90,9 +93,5 @@ public class DisciplineService {
         return disciplineDTOS;
     }
 
-    protected void emptyCollectionHandling(Set<Object> collection){
-        if (collection.isEmpty()){
-            throw new ResponseStatusException(HttpStatus.NO_CONTENT);
-        }
-    }
+
 }
