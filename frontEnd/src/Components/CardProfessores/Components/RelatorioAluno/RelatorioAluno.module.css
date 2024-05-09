@@ -1,0 +1,73 @@
+.containerBody
+{
+  height: auto;
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bodyCard {
+  width: 70%;
+  height: auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  border-radius: 2rem;
+ 
+ 
+}
+
+.cardAluno{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.alunoNome{
+
+  width: 5rem;
+  text-align: center;
+}
+.info{
+  text-align: center;
+}
+
+.alunoMatricula,.alunoNota,.alunoFrequencia{
+  width: 5rem;
+}
+
+.aprovado{
+
+  color: green;
+}
+
+.reprovado{
+
+  color: red;
+}
+
+.cardAluno{
+  background-color: #D9D9D9;
+  border-radius: 0.5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.containerAluno{
+  display: flex;
+  flex-direction: column;
+  gap : 0.2rem;
+  width: 80%;
+  justify-content: center;
+}
+
+.cardAluno:nth-child(even)
+{
+ background-color: #F0F0F0;
+}
