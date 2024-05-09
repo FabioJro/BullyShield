@@ -1,7 +1,7 @@
 import React from "react";
 import Style from "./CardProfessores.module.css";
 import RelatorioAluno from './Components/RelatorioAluno'
-
+import ModalAluno  from './Components/ModalAluno'
 
 const index = () => {
   const turma = [
@@ -34,8 +34,8 @@ const index = () => {
   return (
     <>
     <h1 className={Style.titleTurma}> C.C - 7NA </h1>
-        <section className={Style.bodyGeral}>  
-       
+        <section className={Style.bodyGeral}> 
+        <ModalAluno/>        
         <section className={Style.sectionCard}>
         <RelatorioAluno/>
           {/* <section className={Style.bodyCard}>

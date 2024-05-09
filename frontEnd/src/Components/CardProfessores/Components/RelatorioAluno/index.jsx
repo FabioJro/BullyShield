@@ -1,6 +1,7 @@
 import React from "react";
 import Style from "./RelatorioAluno.module.css";
 
+
 const index = () => {
   const alunos = [
     {
@@ -143,8 +144,10 @@ const index = () => {
     },
   ];
   return (
+
     <section className={Style.containerBody}>
-    <section className={Style.bodyCard}>
+      
+      <section className={Style.bodyCard}>
       <section className={Style.containerAluno}>
         {alunos.map((aluno, key) => {
           return (
@@ -176,7 +179,7 @@ const index = () => {
         })}
       </section>
       </section>
-      </section>
+    </section>
   );
 };
 

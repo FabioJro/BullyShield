@@ -1,0 +1,74 @@
+.bodyPage{
+    height: 100vh;
+    width: 100vw;
+    background-color: #d9d9d9bf ;
+    
+    z-index: 99;
+    position: fixed ;
+    top : 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodyHistorico{
+    width: 30%;
+    height: 60%;
+    background-color: #F0F0F0;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.modal{
+    
+    width: 40vw;
+
+}
+.modalHistorico{
+    height: auto;
+    padding-top: 0.5rem;
+    display: flex; 
+    justify-content: center;
+
+}
+
+.historico{    
+    display: flex;
+    justify-content: center;
+    background-color: #FFC34D;
+    text-align: center;
+    border-radius: 1rem;    
+}
+
+.modalNome{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw;
+    
+}
+
+.modalInfo{
+    
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #FFC34D;
+    border-radius: 2rem;
+}
+
+.modalAluno{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+}
+.modalAluno:nth-child(even)
+{
+ background-color: #F0F0F0;
+}
