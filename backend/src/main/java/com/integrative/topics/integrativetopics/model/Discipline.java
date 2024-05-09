@@ -7,6 +7,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 
 @Entity
 @Data
@@ -18,20 +21,35 @@ public class Discipline {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long disciplineId;
-    @Column(name = "d_name")
-    private String name;
-    @Column(name = "d_avg")
-    private Double disciplineAverage;
 
-    @ManyToOne(cascade = CascadeType.ALL ,fetch = FetchType.LAZY)
+
+    @Column(name = "disc_name")
+    private String disciplineName;
+
+    @Column(name = "disc_grade_avg")
+    private Double gradeAverage;
+
+    @Column(name = "dis_freq_avg")
+    private Double frequencyAverage;
+
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "disciplines")
+    private Set<Team> teams = new HashSet<>();
+
+    @JsonIgnore
+    @ManyToOne
     @JoinColumn(name = "professor_id")
     @JsonIgnore
     private Professor professor;
 
-    @OneToOne
-    @JoinColumn(name = "discipline_team")
+
     @JsonIgnore
-    private Team disciplinesTeam;
+    @ManyToMany(mappedBy = "disciplines")
+    private Set<Student> students = new HashSet<>();
 
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "discipline", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private Set<DisciplineStudentInfo> disciplineStudentInfo;
 }
