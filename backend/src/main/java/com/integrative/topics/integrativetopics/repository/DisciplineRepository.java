@@ -6,4 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DisciplineRepository extends JpaRepository<Discipline, Long> {
+
+
+
+    List<Discipline> findByProfessor(Professor professor);
+
 }

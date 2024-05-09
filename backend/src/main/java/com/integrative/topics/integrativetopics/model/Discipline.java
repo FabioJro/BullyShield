@@ -22,6 +22,7 @@ public class Discipline {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long disciplineId;
 
+
     @Column(name = "disc_name")
     private String disciplineName;
 
@@ -39,11 +40,14 @@ public class Discipline {
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "professor_id")
+    @JsonIgnore
     private Professor professor;
+
 
     @JsonIgnore
     @ManyToMany(mappedBy = "disciplines")
     private Set<Student> students = new HashSet<>();
+
 
     @JsonIgnore
     @OneToMany(mappedBy = "discipline", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
