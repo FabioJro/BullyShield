@@ -1,7 +1,8 @@
 .containerBody
 {
-  height: 30rem;
+  height: auto;
   width: 100%;
+  padding: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +10,8 @@
 
 .bodyCard {
   width: 70%;
-  height: 25rem;
+  height: auto;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;

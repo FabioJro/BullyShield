@@ -38,7 +38,7 @@ const index = () => {
        
         <section className={Style.sectionCard}>
         <RelatorioAluno/>
-          <section className={Style.bodyCard}>
+          {/* <section className={Style.bodyCard}>
             {turma.map((card, key) => {
               return (
                 <div className={Style.profCard} key={key}>
@@ -63,7 +63,7 @@ const index = () => {
                 </div>
               );
             })}
-          </section>
+          </section> */}
         </section>
       </section>
     </>
