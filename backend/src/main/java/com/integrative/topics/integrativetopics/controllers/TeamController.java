@@ -16,10 +16,10 @@ public class TeamController {
     private TeamService teamService;
 
 
-    @GetMapping(path = "/find/teams-by{professorId}")
+    @GetMapping(path = "/find/teams-by/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Set<ViewListTeamsDTO> findTeamsByProfessorId(@PathVariable Long professorId){
-        return teamService.findTeamsByProfessorId( professorId );
+    public Set<ViewListTeamsDTO> findTeamsByProfessorId(@PathVariable Long id){
+        return teamService.findTeamsByProfessorId( id );
     }
 
 

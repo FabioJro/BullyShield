@@ -18,7 +18,7 @@ public class StudentController {
     private StudentService studentService;
 
 
-    @GetMapping(path = "/show-performance-in-disciplines-by-{studentId}")
+    @GetMapping(path = "/show-performance-in-disciplines-by/{studentId}")
     @ResponseStatus(HttpStatus.OK)
     public ViewStudentRecordDTO displayStudentPerformanceInDisciplines(@PathVariable Long studentId){
         return studentService.showStudentAndYourDisciplines( studentId );
