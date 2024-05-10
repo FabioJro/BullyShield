@@ -1,6 +1,7 @@
 import React from "react";
 import Style from "./RelatorioAluno.module.css";
 
+
 const index = () => {
   const alunos = [
     {
@@ -141,10 +142,72 @@ const index = () => {
       media: 3.0,
       frequencia: "20",
     },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
   ];
   return (
+
     <section className={Style.containerBody}>
-    <section className={Style.bodyCard}>
+      
+      <section className={Style.bodyCard}>
       <section className={Style.containerAluno}>
         {alunos.map((aluno, key) => {
           return (
@@ -176,7 +239,7 @@ const index = () => {
         })}
       </section>
       </section>
-      </section>
+    </section>
   );
 };
 
