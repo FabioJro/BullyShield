@@ -142,6 +142,66 @@ const index = () => {
       media: 3.0,
       frequencia: "20",
     },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
+    {
+      nome: "Marcello",
+      matricula: 12345322,
+      media: 3.0,
+      frequencia: "20",
+    },
   ];
   return (
 

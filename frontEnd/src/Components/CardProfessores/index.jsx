@@ -35,7 +35,7 @@ const index = () => {
     <>
     <h1 className={Style.titleTurma}> C.C - 7NA </h1>
         <section className={Style.bodyGeral}> 
-        <ModalAluno/>        
+        {/* <ModalAluno/>         */}
         <section className={Style.sectionCard}>
         <RelatorioAluno/>
           {/* <section className={Style.bodyCard}>

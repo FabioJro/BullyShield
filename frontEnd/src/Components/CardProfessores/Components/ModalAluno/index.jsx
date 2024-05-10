@@ -10,7 +10,133 @@ const index = () => {
           nomeDisciplina: "Matematica",
           mediaNotaDisciplina: "2.5",
           frequenciaMediaDisciplina: "90",
+         
         },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        }, {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+        {
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },{
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },{
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },{
+          nomeDisciplina: "Matematica",
+          mediaNotaDisciplina: "2.5",
+          frequenciaMediaDisciplina: "90",
+         
+        },
+
+
       ],
     },
   ];
@@ -23,23 +149,27 @@ const index = () => {
               <div className={Style.modalHistorico}>
                 <h2 className={Style.historico}>Historico do Aluno</h2>
               </div>
-              <div className={Style.modalNome}>
-                <div className={Style.nome}>
-                  <p>{card.nome}</p>
-                </div>
-                <div div className={Style.matricula}>
-                  <p>{card.matricula}</p>
+              <div className={Style.infoAluno}>
+                <div className={Style.modalNome}>
+                  <div className={Style.nome}>
+                    <p>{card.nome}</p>
+                  </div>
+                  <div div className={Style.matricula}>
+                    <p>{card.matricula}</p>
+                  </div>
                 </div>
               </div>
-              <div className={Style.modalInfo}>
-                <div div className={Style.matricula}>
-                  <p>Disciplina</p>
-                </div>
-                <div div className={Style.media}>
-                  <p>Nota Media</p>
-                </div>
-                <div div className={Style.frequencia}>
-                  <p>Frequencia</p>
+              <div className={Style.info}>
+                <div className={Style.modalInfo}>
+                  <div div className={Style.matricula}>
+                    <p>Disciplina</p>
+                  </div>
+                  <div div className={Style.media}>
+                    <p>Nota Media</p>
+                  </div>
+                  <div div className={Style.frequencia}>
+                    <p>Frequencia</p>
+                  </div>
                 </div>
               </div>
               <div className={Style.modalDisciplina}>
@@ -53,10 +183,7 @@ const index = () => {
                         <div div className={Style.modalmediaNotaDisciplina}>
                           <p>{disciplina.mediaNotaDisciplina}</p>
                         </div>
-                        <div
-                          div
-                          className={Style.modalfrequenciaMediaDisciplina}
-                        >
+                        <div className={Style.modalfrequenciaMediaDisciplina}>
                           <p>{disciplina.frequenciaMediaDisciplina}</p>
                         </div>
                       </div>
