@@ -30,7 +30,7 @@ public class DisciplineController {
         return disciplineService.showListOfDisciplinesAssociatesBy( enrollment );
     }
 
-    @GetMapping(path = "/list/disciplines-by-{teamId}")
+    @GetMapping(path = "/list/disciplines-by-/{teamId}")
     public Set<ViewListOfDisciplinesDTO> showListOfDisciplineTeams(@PathVariable Long teamId){
         return disciplineService.showListOfDisciplineTeams(teamId);
 
