@@ -37,7 +37,7 @@ public class Discipline {
     @ManyToMany(mappedBy = "disciplines")
     private Set<Team> teams = new HashSet<>();
 
-    @JsonIgnore
+
     @ManyToOne
     @JoinColumn(name = "professor_id")
     private Professor professor;
