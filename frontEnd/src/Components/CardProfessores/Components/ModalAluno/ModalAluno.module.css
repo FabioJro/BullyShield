@@ -1,0 +1,100 @@
+.bodyPage {
+  height: 100vh;
+  width: 100vw;
+  background-color: #d9d9d9bf;
+
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyHistorico {
+  width: 30%;
+  height: 60%;
+  background-color: #f0f0f0;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  width: 40vw;
+}
+.modalHistorico {
+  height: auto;
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.historico {
+  display: flex;
+  justify-content: center;
+  background-color: #ffc34d;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.infoAluno{
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+
+}
+.modalNome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 34rem;
+  height: 2rem;
+  padding-left: 0.5rem;
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-color: #ffc34d;
+}
+.info {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+.modalInfo {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #ffc34d;
+  width: 34rem;
+  border-radius: 2rem;
+  height: 2rem;
+  padding-left: 0.5rem;
+  align-items: center;
+}
+.modalDisciplina {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem; 
+  width: 34rem;
+  height: 40vh;
+  overflow-y: auto;
+ 
+  
+}
+.modalAluno {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+  border-radius: 2rem;
+  padding-left: 0.5rem;
+  align-items: center;
+  
+}
+
+.modalNomeDisciplina,
+.modalmediaNotaDisciplina,
+.modalfrequenciaMediaDisciplina {
+  width: 2rem;
+}
+.modalAluno:nth-child(even) {
+  background-color: #f0f0f0;
+}

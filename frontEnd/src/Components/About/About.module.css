@@ -1,0 +1,18 @@
+.bodyGeral {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sectionCard {
+    background-color: #ffc34d;
+    
+    width: 65%;
+    border-radius: 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
