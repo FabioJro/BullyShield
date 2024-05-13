@@ -5,7 +5,7 @@ import logo from "/Logo.svg";
 import { Link } from "react-router-dom";
 
 const index = () => {
-  const menuNav = ["Inicio", "Disciplinas", "Alunos", "Sobre"];
+  const menuNav = ["Inicio", "Disciplinas", "Alunos", "Sobre" , "Sair"];
   return (
     <header className={Style.bodyNavbar}>
       <nav className={Style.navbar}>
