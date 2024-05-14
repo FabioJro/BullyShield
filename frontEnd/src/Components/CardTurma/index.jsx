@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Style from './CardLogin.module.css'
+import FindTeams from '../../hooks/FindTeams'
+import Cookies from 'js-cookie'
 
 const index = () => {
     const turma = [
@@ -55,6 +57,17 @@ const index = () => {
     const findTurma = (e)=>{
         e.target.value
     }
+    const [turmaList, setTurma] =useState({})
+    useEffect(()=>{
+        const user = Cookies.get('user')
+        console.log(user);
+       const getTurma = async(user)=>{
+         const turmaResponse = await FindTeams(user)
+         setTurma({turmaResponse})
+        }
+        getTurma(user)      
+    },[])
+    console.log(turmaList.turmaResponse.data);
     return (
         <section className={Style.body}>
             <section className={Style.sectionCard}>
