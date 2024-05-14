@@ -15,9 +15,9 @@ public interface TeamRepository extends JpaRepository<Team, Long> {
 
     @Query("SELECT DISTINCT t FROM Team t " +
             "JOIN t.disciplines d " +
-            "WHERE d.professor.professorId = :professorId"
+            "WHERE d.professor.enrollment = :enrollment"
     )
-    Set<Team> findDistinctTeamsByDisciplinesProfessorId(@Param("professorId") Long professorId);
+    Set<Team> findDistinctTeamsByDisciplinesEnrollment(@Param("enrollment") String enrollment);
 
     Set<Discipline> findDisciplinesByTeamId(@Param("teamId") Long teamId);
 }

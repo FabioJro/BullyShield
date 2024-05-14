@@ -19,8 +19,8 @@ public class TeamService {
     private DTOServices dtoService;
 
 
-    public Set<ViewListTeamsDTO> findTeamsByProfessorId(Long professorId) {
-        Set<Team> teamList = teamRepository.findDistinctTeamsByDisciplinesProfessorId( professorId );
+    public Set<ViewListTeamsDTO> findTeamsByProfessorId(String enrollment) {
+        Set<Team> teamList = teamRepository.findDistinctTeamsByDisciplinesEnrollment( enrollment );
 
         Set<ViewListTeamsDTO> teamsDTOS = teamList.stream()
                 .map( ViewListTeamsDTO::new )
