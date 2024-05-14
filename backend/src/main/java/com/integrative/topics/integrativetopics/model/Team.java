@@ -26,8 +26,18 @@ public class Team {
     @Column(name = "course_name")
     private String courseName;
 
+    @JsonIgnore
+    @ManyToMany
+    @JoinTable(
+            name = "discipline_teams",
+            joinColumns = @JoinColumn(name = "team_id"),
+            inverseJoinColumns = @JoinColumn(name = "discipline_id")
+    )
+    private Set<Discipline> disciplines = new HashSet<>();
+
+
     @Column(name = "team_glb_avg")
-    private double teamGlbAvg;
+    private double teamGlbAvg = calcAvgTeam(disciplines);
 
     @Column(name = "team_fqc_avg")
     private int teamFqcAvg;
@@ -38,12 +48,13 @@ public class Team {
     @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Set<Student> students = new HashSet<>();
 
-    @JsonIgnore
-    @ManyToMany
-    @JoinTable(
-            name = "discipline_teams",
-            joinColumns = @JoinColumn(name = "team_id"),
-            inverseJoinColumns = @JoinColumn(name = "discipline_id")
-    )
-    private Set<Discipline> disciplines = new HashSet<>();
+    private double calcAvgTeam(Set<Discipline> disc){
+        double sum = 0;
+        for (Discipline d : disc){
+            sum += d.getGradeAverage();
+        }
+
+        return sum/disc.size();
+    }
+
 }
