@@ -22,16 +22,18 @@ public class Discipline {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long disciplineId;
 
+    @JsonIgnore
+    @ManyToMany(mappedBy = "disciplines")
+    private Set<Student> students = new HashSet<>();
 
     @Column(name = "disc_name")
     private String disciplineName;
 
     @Column(name = "disc_grade_avg")
-    private Double gradeAverage;
+    private Double gradeAverage = CalcAverage(students);
 
     @Column(name = "dis_freq_avg")
     private Double frequencyAverage;
-
 
     @JsonIgnore
     @ManyToMany(mappedBy = "disciplines")
@@ -44,11 +46,14 @@ public class Discipline {
 
 
     @JsonIgnore
-    @ManyToMany(mappedBy = "disciplines")
-    private Set<Student> students = new HashSet<>();
-
-
-    @JsonIgnore
     @OneToMany(mappedBy = "discipline", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Set<DisciplineStudentInfo> disciplineStudentInfo;
+
+    private double CalcAverage(Set<Student> list){
+        double sum =0;
+        for (Student student: list){
+           sum += student.getStudentGradeAvg();
+        }
+        return sum/list.size();
+    }
 }
