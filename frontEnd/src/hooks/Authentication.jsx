@@ -8,7 +8,7 @@ const Authentication =  (matricula) => {
     
     try {
       
-        const response = axios.post(`http://localhost:8081/api/auth`, matricula)
+        const response = axios.post(`http://185.137.92.83:8081/api/auth`, matricula)
 
         return response;
     } catch (error) {
