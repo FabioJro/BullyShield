@@ -16,9 +16,9 @@ public class TeamController {
     private TeamService teamService;
 
 
-    @GetMapping(path = "/find/teams-by/{id}")
+    @GetMapping(path = "/find/teams-by/{enrollment}")
     @ResponseStatus(HttpStatus.OK)
-    public Set<ViewListTeamsDTO> findTeamsByProfessorId(@PathVariable String enrollment){
+    public Set<ViewListTeamsDTO> findTeamsByProfessorEnrollment(@PathVariable String enrollment){
         return teamService.findTeamsByProfessorId( enrollment );
     }
 
