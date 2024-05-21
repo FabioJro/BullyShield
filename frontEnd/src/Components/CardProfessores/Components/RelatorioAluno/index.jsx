@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Style from "./RelatorioAluno.module.css";
 
 const index = () => {
-  const alunos = [
+  const [alunos, setAlunos] = useState([
     {
       nome: "Diego",
       matricula: 12313222,
@@ -201,7 +201,30 @@ const index = () => {
       media: 3.0,
       frequencia: "20",
     },
-  ];
+  ]);
+
+  const [filtroTexto, setFiltroTexto] = useState("");
+  const [filtroMedia, setFiltroMedia] = useState("todos");
+
+  const handleFilter = (e) => {
+    setFiltroTexto(e.target.value);
+  };
+  const handleFilterMedia = (e) => {
+    setFiltroMedia(e.target.value);
+  };
+  const filterName = alunos.filter((aluno) => {
+    const nomeMatch = aluno.nome
+      .toLowerCase()
+      .includes(filtroTexto.toLowerCase());
+    if (filtroMedia === "maiorMedia") {
+      return nomeMatch && aluno.media >= 7;
+    } else if (filtroMedia === "menorMedia") {
+      return nomeMatch && aluno.media < 7;
+    } else {
+      return nomeMatch;
+    }
+  });
+
   return (
     <section className={Style.containerBody}>
       {/* <div className={Style.bodyInfo}>
@@ -215,10 +238,12 @@ const index = () => {
               className={Style.inputFindTurma}
               type="text"
               placeholder="Buscar Aluno"
+              value={filtroTexto}
+              onChange={handleFilter}
             />
           </div>
           <div className={Style.teste}>
-            <select className={Style.selectMedia} placeholder="Aluno">
+          <select className={Style.selectMedia} value={filtroMedia} onChange={handleFilterMedia}>
               <option value="maiorMedia">Aluno</option>
               <option value="maiorMedia">Maior Media</option>
               <option value="menorMedia">Menor Media</option>
@@ -226,9 +251,9 @@ const index = () => {
           </div>
         </div>
         <section className={Style.containerAluno}>
-          {alunos.map((aluno, key) => {
+          {filterName.map((aluno, index) => {
             return (
-              <section className={Style.cardAluno} key={key}>
+              <section className={Style.cardAluno} key={index}>
                 <div className={Style.alunoNome}>
                   <p>{aluno.nome}</p>
                 </div>
