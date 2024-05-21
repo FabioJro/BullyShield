@@ -5,8 +5,8 @@
     width: 100%;
 }
 .sectionCard{
-    background-color: #FFC34D;
-    height: 80vh;
+    background-color: #C7C7C7;
+    height: 85vh;
     width: 65%;
     border-radius: 74px;
     display: flex ;
@@ -40,6 +40,10 @@
     border-radius: 9px;
 
 }
+.card:hover{
+    cursor: pointer;
+}
+
 .bodyCardTurma{
     width:100%;
     height:80%;
@@ -47,9 +51,23 @@
     border-radius: 9px 9px 0 0;
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
     align-items: center;
 }
+.redBorder{ 
+    border: 2px solid red;
+    box-shadow: -2px 6px 5px 0px rgba(255,0,0,0.75);
+-webkit-box-shadow: -2px 6px 5px 0px rgba(255,0,0,0.75);
+-moz-box-shadow: -2px 6px 5px 0px rgba(255,0,0,0.75);
+}
+
+.yellowBorder{
+    border: 2px solid #ffff00;
+    box-shadow: -2px 6px 5px 0px rgba(255,255,0,0.75);
+-webkit-box-shadow: -2px 6px 5px 0px rgba(255,255,0,0.75);
+-moz-box-shadow: -2px 6px 5px 0px rgba(255,255,0,0.75);
+}
+
 .tilteCardTurma{
     height: 4rem;
     display: flex;
@@ -59,15 +77,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 .footerCard{
-    background-color: #FBA700;
+    background-color: #2b0d7c;
     border-radius: 7px;
     width: 100%;
     height: 20%;
     border-radius:  0 0 9px 9px;
     display: flex;
+    color: #fff;
     align-items: center;
     justify-content: center;
 

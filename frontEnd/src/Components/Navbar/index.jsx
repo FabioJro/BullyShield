@@ -2,10 +2,15 @@ import React from "react";
 
 import Style from "./navbar.module.css";
 import logo from "/Logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const index = () => {
-  const menuNav = ["Inicio", "Disciplinas", "Alunos", "Sobre" , "Sair"];
+  const menuNav = ["Inicio", "Alunos", "Sobre"];
+  const navigate = useNavigate();
+  const logout = ()=>{
+    navigate('/')
+  }
+  // , "Disciplinas"
   return (
     <header className={Style.bodyNavbar}>
       <nav className={Style.navbar}>
@@ -22,6 +27,7 @@ const index = () => {
                   </li>
                 </Link>
               ))}
+              <button className={Style.logout} onClick={logout}>Sair</button>
             </ul>
           </section>
         </section>
