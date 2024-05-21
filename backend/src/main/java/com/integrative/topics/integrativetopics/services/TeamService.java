@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -18,10 +19,15 @@ public class TeamService {
     @Autowired
     private DTOServices dtoService;
 
+    @Autowired
+    private ProfessorService professorService;
+
 
     public Set<ViewListTeamsDTO> findTeamsByProfessorId(String enrollment) {
-        Set<Team> teamList = teamRepository.findDistinctTeamsByDisciplinesEnrollment( enrollment );
+        Long professorId = professorService.findProfessorBy(enrollment).getProfessorId();
 
+        List<Team> teamList = teamRepository.findDistinctTeamsByDisciplinesEnrollment( professorId );
+        System.out.println(teamList.toString());
         Set<ViewListTeamsDTO> teamsDTOS = teamList.stream()
                 .map( ViewListTeamsDTO::new )
                 .collect(Collectors.toSet());
