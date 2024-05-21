@@ -6,21 +6,21 @@ import Cookies from 'js-cookie'
 import axios from "axios";
 
 const index = () => {
-  const [matricula, setMatricula] = useState("");
+  const [matricula, setMatricula] = useState(0);
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
 
   const handleFunction = async(e) => {
   e.preventDefault();
-    const response =  await Authentication(matricula)
-    if (response.data== false){
+    // const response =  await Authentication(matricula)
+    if (matricula){
       
       Cookies.set('user', matricula)
       navigate('/inicio')
 
     }
-    console.log(response);
+    // console.log(response);
   };
 
   return (
@@ -31,7 +31,7 @@ const index = () => {
         <form  className={Style.containerInput}>
           <input
             onChange={(e) => setMatricula(e.target.value)}
-            type="text"
+            type="number"
             placeholder="Matrícula"
             className={Style.inputMatricula}
           />

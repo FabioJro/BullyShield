@@ -1,5 +1,6 @@
 .bodyGeral {
     width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -7,12 +8,19 @@
   }
   
   .sectionCard {
-    background-color: #ffc34d;
-    
-    width: 65%;
+    background-color: #c2b7b7;
+    gap: .6rem;
+    width: 50%;
     border-radius: 74px;
     display: flex;
+    height: auto;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+  }
+
+  .sectionCard p{
+    width: 100%;
+    text-align: center;
   }

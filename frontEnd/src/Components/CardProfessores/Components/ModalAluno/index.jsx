@@ -1,6 +1,6 @@
 import React from "react";
 import Style from "./ModalAluno.module.css";
-const index = () => {
+const index = ({id, onClose}) => {
   const historico = [
     {
       nome: "Fabio",
@@ -142,6 +142,7 @@ const index = () => {
   ];
   return (
     <section className={Style.bodyPage}>
+      <button className={Style.fecharModal} onClick={onClose}>x</button>
       <section className={Style.bodyHistorico}>
         {historico.map((card, key) => {
           return (
@@ -152,10 +153,12 @@ const index = () => {
               <div className={Style.infoAluno}>
                 <div className={Style.modalNome}>
                   <div className={Style.nome}>
-                    <p>{card.nome}</p>
+                    <p>
+                        {id.nome}
+                    </p>
                   </div>
                   <div div className={Style.matricula}>
-                    <p>{card.matricula}</p>
+                    <p>{id.matricula}</p>
                   </div>
                 </div>
               </div>
@@ -174,17 +177,17 @@ const index = () => {
               </div>
               <div className={Style.modalDisciplina}>
                 <p>
-                  {card.disciplinas.map((disciplina, key) => {
+                  {id.disciplinas.map((disciplina, key) => {
                     return (
                       <div className={Style.modalAluno}>
                         <div div className={Style.modalNomeDisciplina}>
-                          <p>{disciplina.nomeDisciplina}</p>
+                          <p>{disciplina.nome}</p>
                         </div>
                         <div div className={Style.modalmediaNotaDisciplina}>
-                          <p>{disciplina.mediaNotaDisciplina}</p>
+                          <p>{disciplina.media}</p>
                         </div>
                         <div className={Style.modalfrequenciaMediaDisciplina}>
-                          <p>{disciplina.frequenciaMediaDisciplina}</p>
+                          <p>{disciplina.frequencia}</p>
                         </div>
                       </div>
                     );

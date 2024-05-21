@@ -7,11 +7,12 @@
 }
 
 .sectionCard {
-  background-color: #ffc34d;
+  background-color: #C7C7C7;
   
   width: 65%;
   border-radius: 74px;
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -41,7 +42,7 @@
 .titleDisciplina {
   text-align: center;
   width: 20rem;
-  background-color: #FBA700;
+  background-color: #C7C7C7;
   border-radius: 0.5rem;
 }
 
