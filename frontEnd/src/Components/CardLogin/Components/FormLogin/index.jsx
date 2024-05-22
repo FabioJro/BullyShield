@@ -13,14 +13,14 @@ const index = () => {
 
   const handleFunction = async(e) => {
   e.preventDefault();
-    // const response =  await Authentication(matricula)
+    const response =  await Authentication(matricula)
     if (matricula){
       
       Cookies.set('user', matricula)
       navigate('/inicio')
 
     }
-    // console.log(response);
+    console.log(response);
   };
 
   return (

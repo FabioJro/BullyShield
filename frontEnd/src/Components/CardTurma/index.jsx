@@ -141,16 +141,16 @@ const index = () => {
     ];
     const navigate = useNavigate()
     const [inputValue, setInputValue] = useState('');
-    const [turmaList, setTurmaList] = useState(turmas);
+    const [turmaList, setTurmaList] = useState({});
 
-    // useEffect(() => {
-    //     const user = Cookies.get('user');
-    //     const getTurma = async (user) => {
-    //         const turmaResponse = await FindTeams(user);
-    //         setTurmaList(turmaResponse);
-    //     };
-    //     getTurma(user);
-    // }, []);
+    useEffect(() => {
+        const user = Cookies.get('user');
+        const getTurma = async (user) => {
+            const turmaResponse = await FindTeams(user);
+            setTurmaList(turmaResponse);
+        };
+        getTurma(user);
+    }, []);
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
