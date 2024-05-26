@@ -8,14 +8,78 @@ const index = () => {
  
     const navigate = useNavigate();
     const [inputValue, setInputValue] = useState('');
-    const [turmaList, setTurmaList] = useState([]);
+    const [turmaList, setTurmaList] = useState([
+        {
+          teamName: 'Turma A',
+          teamGlbAvg: 7,
+          teamFqcAvg: 85,
+          enrolledStudents: 30,
+          numberOfDisciplines: 5
+        },
+        {
+          teamName: 'Turma B',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma B',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma B',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma B',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma B',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma B',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma B',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma C',
+          teamGlbAvg: 4.5,
+          teamFqcAvg: 70,
+          enrolledStudents: 20,
+          numberOfDisciplines: 3
+        }
+      ]);
 
     useEffect(() => {
         const user = Cookies.get('user');
         const getTurma = async (user) => {
             const turmaResponse = await FindTeams(user);
-            setTurmaList(turmaResponse);
-        };
+           // setTurmaList(turmaResponse);
+        };  
         getTurma(user);
     }, []);
 
