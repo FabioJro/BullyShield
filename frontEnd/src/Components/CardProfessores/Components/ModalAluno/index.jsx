@@ -158,7 +158,7 @@ const index = ({id, onClose}) => {
                     </p>
                   </div>
                   <div div className={Style.matricula}>
-                    <p>{id.matricula}</p>
+                    <p>Matricula : {id.matricula}</p>
                   </div>
                 </div>
               </div>
@@ -177,7 +177,7 @@ const index = ({id, onClose}) => {
               </div>
               <div className={Style.modalDisciplina}>
                 <p>
-                  {id.disciplinas.map((disciplina, key) => {
+                  {id && id.disciplinas.map((disciplina, key) => {
                     return (
                       <div className={Style.modalAluno}>
                         <div div className={Style.modalNomeDisciplina}>
