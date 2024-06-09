@@ -6,8 +6,7 @@ import Disciplinas from '../../Components/Disciplinas'
 const index = () => {
   return (
     <div>
-      <Navbar />
-      
+      <Navbar />      
       <CardProfessor />
     </div>
   );

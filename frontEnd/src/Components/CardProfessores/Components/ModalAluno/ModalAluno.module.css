@@ -2,7 +2,6 @@
   height: 100vh;
   width: 100vw;
   background-color: #d9d9d9bf;
-
   z-index: 99;
   position: fixed;
   top: 0;
@@ -25,41 +24,50 @@
 .modal {
   width: 40vw;
 }
+
 .modalHistorico {
   height: auto;
   padding-top: 0.5rem;
   display: flex;
   justify-content: center;
+  
 }
-.fecharModal{
+h2 {
+  font-size: 1rem; 
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.fecharModal {
   position: absolute;
-  top: 12rem;
-  right: 43rem;
+  top: 21%;
+  right: 30%;
   width: 2rem;
   height: 2rem;
   border: 1px solid;
-  border-radius: .5rem;
-  color: #ffc34d;
+  border-radius: 0.5rem;
+  color: #2b0d7c;
 }
 
-.fecharModal:hover{
+.fecharModal:hover {
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
   background-color: #d9d9d9;
 }
+
 .historico {
   display: flex;
   justify-content: center;
-  background-color: #ffc34d;
+  background-color: #607af3;
   text-align: center;
   border-radius: 1rem;
 }
 
-.infoAluno{
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
-
+.infoAluno {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
 }
+
 .modalNome {
   display: flex;
   justify-content: space-between;
@@ -67,44 +75,49 @@
   width: 34rem;
   height: 2rem;
   padding-left: 0.5rem;
-  align-items: center;
   border-bottom-style: solid;
-  border-bottom-color: #ffc34d;
+  border-bottom-color: #2b0d7c;
 }
+
 .info {
   padding-top: 0.5rem;
   padding-left: 0.5rem;
 }
+
 .modalInfo {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
+  align-items: center; 
   text-align: center;
-  background-color: #ffc34d;
+  background-color: #607af3;
   width: 34rem;
   border-radius: 2rem;
   height: 2rem;
-  padding-left: 0.5rem;
-  align-items: center;
+  padding: 0.5rem; 
+  box-sizing: border-box; 
 }
+
+.modalInfo > * {
+  margin: 0 0.5rem; 
+}
+
 .modalDisciplina {
   padding-top: 0.5rem;
-  padding-left: 0.5rem; 
+  padding-left: 0.5rem;
   width: 34rem;
   height: 40vh;
   overflow-y: auto;
- 
-  
 }
+
 .modalAluno {
   display: flex;
   justify-content: space-between;
   background-color: #d9d9d9;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding-left: 0.5rem;
   align-items: center;
   height: 3rem;
-  padding: 0 .5rem;
-  
+  padding: 0 0.5rem;
 }
 
 .modalNomeDisciplina,
@@ -112,6 +125,117 @@
 .modalfrequenciaMediaDisciplina {
   width: 2rem;
 }
+
 .modalAluno:nth-child(even) {
   background-color: #f3efef;
+}
+
+@media (max-width: 1920px) {
+  .fecharModal {
+    right: 36%;
+  }
+}
+
+@media (max-width: 1888px) {
+  .bodyHistorico {
+    width: 28%;
+  }
+
+  .modal {
+    width: 60vw;
+  }
+
+  .modalNome,
+  .modalInfo,
+  .modalDisciplina {
+    width: 98%;
+  }
+  .fecharModal {
+    right: 38%;
+  }
+
+  .modalHistorico {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .bodyHistorico {
+    width: 40%;
+  }
+
+  .modal {
+    width: 60vw;
+  }
+
+  .modalNome,
+  .modalInfo,
+  .modalDisciplina {
+    width: 98%;
+  }
+  .fecharModal {
+    right: 33%;
+  }
+}
+
+@media (max-width: 992px) {
+  .bodyHistorico {
+    width: 50%;
+  }
+
+  .modal {
+    width: 60vw;
+  }
+
+  .modalNome,
+  .modalInfo,
+  .modalDisciplina {
+    width: 98%;
+  }
+
+  .fecharModal {
+    right: 28%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bodyHistorico {
+    width: 70%;
+  }
+
+  .modal {
+    width: 80vw;
+  }
+
+  .modalNome,
+  .modalInfo,
+  .modalDisciplina {
+    width: 96%;
+  }
+
+  .fecharModal {
+    right: 20%;
+  }
+}
+
+@media (max-width: 576px) {
+  .modalNome,
+  .modalInfo,
+  .modalDisciplina {
+    width: 95%;
+  }
+
+  .fecharModal {
+    right: 20%;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 0.1rem;
+    font-size: 0.6rem;
+  }
+
+  .historico,
+  .modalInfo,
+  .modalAluno {
+    font-size: 0.8rem;
+  }
 }

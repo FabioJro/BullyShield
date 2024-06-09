@@ -71,3 +71,10 @@
 
   color: red;
 }
+
+@media (max-width : 800px ){
+
+  .sectionCard{
+    width: 100%;
+  }
+}

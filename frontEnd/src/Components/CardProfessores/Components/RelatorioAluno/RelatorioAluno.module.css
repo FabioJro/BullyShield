@@ -1,5 +1,4 @@
 .containerBody {
-  /* height: auto; */
   width: 100%;
   padding: 1rem 0;
   display: flex;
@@ -70,8 +69,8 @@
   background-color: #f0f0f0;
 }
 
-.inputFindTurma, .selectMedia {
-  
+.inputFindTurma,
+.selectMedia {
   height: 2.5rem;
   border-radius: 12px;
   text-align: center;
@@ -93,3 +92,76 @@
   padding-top: 1rem;
 }
 
+/* Tablets and smaller laptops (up to 992px) */
+@media (max-width: 992px) {
+  .bodyCard {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .alunoNome,
+  .alunoMatricula,
+  .alunoNota,
+  .alunoFrequencia {
+    width: 4rem;
+  }
+
+  .containerSearch {
+    width: 70%;
+  }
+}
+
+/* Large smartphones and tablets (up to 768px) */
+@media (max-width: 768px) {
+  .bodyCard {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .alunoNome,
+  .alunoMatricula,
+  .alunoNota,
+  .alunoFrequencia {
+    width: 3.5rem;
+  }
+
+  .containerSearch {
+    width: 80%;
+  }
+
+  .inputFindTurma,
+  .selectMedia {
+    width: 100%;
+  }
+}
+
+/* Small smartphones (up to 576px) */
+@media (max-width: 576px) {
+  .bodyCard {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .alunoNome,
+  .alunoMatricula,
+  .alunoNota,
+  .alunoFrequencia {
+    width: 3rem;
+  }
+
+  .containerSearch {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerAluno {
+    width: 90%;
+  }
+
+  .inputFindTurma,
+  .selectMedia {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

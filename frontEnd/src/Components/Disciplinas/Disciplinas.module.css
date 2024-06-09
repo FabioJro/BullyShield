@@ -27,7 +27,7 @@
     height: 13rem;
     width: 40rem;
     background-color:#fff;
-        border-radius: 4rem;
+    border-radius: 4rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -66,4 +66,73 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+
+@media (max-width: 1024px) {
+
+    .container_disciplina{
+        width: 80%;
+       
+    }
+    .body_disciplinas {
+        width: 60%;
+    }
+    
+    .card_disciplina {
+        height: auto;
+        padding: 1rem;
+        width:30rem;
+    }
+
+    .container_title p {
+        font-size: .7rem;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .body_disciplinas {
+        width: 90%;
+    }
+
+    .container_body {
+        flex-direction: column;
+                
+    }
+
+    .container_title p {
+        width: 60%;
+    }
+
+    .card_disciplina {
+        height: auto;
+        padding: 1rem;
+        width:90%;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+   
+    
+
+    
+    .card_disciplina {
+        
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+
+    .container_title p {
+        width: 80%;
+        font-size: .6rem;
+    }
+
+    .body{
+
+        font-size: 0.8rem;
+    }
+
+    
 }
