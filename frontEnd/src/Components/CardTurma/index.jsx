@@ -87,7 +87,7 @@ const index = () => {
         setInputValue(e.target.value);
         e.preventDefault();
         // Filtrar as turmas com base no valor do input
-        const filteredTurmas = turmas.filter((turma) =>
+        const filteredTurmas = turmaList.filter((turma) =>
                 turma.teamName.toLowerCase().includes(e.target.value.toLowerCase())
         );
         setTurmaList(filteredTurmas);
