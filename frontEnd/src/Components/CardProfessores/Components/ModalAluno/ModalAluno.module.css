@@ -40,11 +40,11 @@ h2 {
 
 .fecharModal {
   position: absolute;
-  top: 21%;
+  top: 18%;
   right: 30%;
   width: 2rem;
   height: 2rem;
-  border: 1px solid;
+  border: 1px solid;  
   border-radius: 0.5rem;
   color: #2b0d7c;
 }
@@ -129,6 +129,32 @@ h2 {
 .modalAluno:nth-child(even) {
   background-color: #f3efef;
 }
+.sendMessageButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sendMessageButton:hover {
+  background-color: #45a049;
+}
+
+.popupMessage {
+  position: absolute;
+  margin-top: 10px;
+  padding: 10px;
+  top: 0%;  
+  right: 2%;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
 
 @media (max-width: 1920px) {
   .fecharModal {
@@ -223,6 +249,9 @@ h2 {
   .modalInfo,
   .modalDisciplina {
     width: 95%;
+  }
+  .popupMessage{
+    width: 90%;
   }
 
   .fecharModal {
