@@ -190,13 +190,13 @@ const index = ({id, onClose}) => {
               {card.disciplinas.map((disciplina, key) => (
                 <div className={Style.modalAluno} key={key}>
                   <div className={Style.modalNomeDisciplina}>
-                    <p>{disciplina.nome}</p>
+                    <p>{disciplina.nomeDisciplina}</p>
                   </div>
                   <div className={Style.modalmediaNotaDisciplina}>
-                    <p>{disciplina.media}</p>
+                    <p>{disciplina.mediaNotaDisciplina}</p>
                   </div>
                   <div className={Style.modalfrequenciaMediaDisciplina}>
-                    <p>{disciplina.frequencia}</p>
+                    <p>{disciplina.frequenciaMediaDisciplina}</p>
                   </div>
                 </div>
               ))}
