@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.Optional;
+
 @Service
 public class StudentService {
 
@@ -16,13 +18,12 @@ public class StudentService {
 
 
     public ViewStudentRecordDTO showStudentAndYourDisciplines(Long studentId){
-        Student student = findStudentById( studentId );
+        Optional<Student> student = studentRepository.findById(studentId);
 
-        return new ViewStudentRecordDTO(student);
-    }
-
-    protected Student findStudentById(Long studentId){
-        return studentRepository.findById( studentId )
-                .orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "the student not found"));
+        if (student.isPresent()){
+            return new ViewStudentRecordDTO(student.get());
+        }else{
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Student not found");
+        }
     }
 }

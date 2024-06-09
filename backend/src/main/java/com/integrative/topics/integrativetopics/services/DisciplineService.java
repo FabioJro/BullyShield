@@ -6,6 +6,7 @@ import com.integrative.topics.integrativetopics.dtos.views.ViewListOfDisciplines
 import com.integrative.topics.integrativetopics.dtos.views.ViewStudentRecordDTO;
 import com.integrative.topics.integrativetopics.model.Discipline;
 import com.integrative.topics.integrativetopics.model.Professor;
+import com.integrative.topics.integrativetopics.model.Team;
 import com.integrative.topics.integrativetopics.repository.DisciplineRepository;
 import com.integrative.topics.integrativetopics.repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 
 import java.util.Collections;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -61,13 +63,17 @@ public class DisciplineService {
     }
 
     public Set<ViewListOfDisciplinesDTO> showListOfDisciplineTeams(Long teamId){
-        Set<Discipline> disciplines = teamRepository.findDisciplinesByTeamId( teamId );
+        Optional<Team> team = teamRepository.findById(teamId);
 
-        Set<ViewListOfDisciplinesDTO> disciplinesDTOS = convertCollectionDisciplineTeamsDTO( disciplines );
-
-        dtoService.emptyCollectionHandling(Collections.singleton(disciplinesDTOS));
-
-        return disciplinesDTOS;
+        if ( team.isPresent() ){
+            Set<Discipline> disciplines = team.get().getDisciplines();
+            Set<ViewListOfDisciplinesDTO> disciplinesDTOS = convertCollectionDisciplineTeamsDTO( disciplines );
+            dtoService.emptyCollectionHandling(Collections.singleton(disciplinesDTOS));
+            return disciplinesDTOS;
+        }else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Team not found");
+        }
+        
     }
 
     protected Discipline findDisciplineById(Long disciplineId){

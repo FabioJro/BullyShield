@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -36,6 +37,7 @@ public class ViewStudentRecordDTO {
         this.studentFrequency = String.valueOf( student.getSutdentFrequencyAvg() );
         this.studentRecordDTO = convertInfoToDTO( student.getDisciplineStudentInfo() );
     }
+
 
     public Set<StudentRecordDTO> convertInfoToDTO(Set<DisciplineStudentInfo> disciplineStudentInfo){
         return disciplineStudentInfo.stream()
