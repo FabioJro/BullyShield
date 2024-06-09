@@ -158,7 +158,7 @@ const index = ({id, onClose}) => {
                     </p>
                   </div>
                   <div div className={Style.matricula}>
-                    <p>{id.matricula}</p>
+                    <p>Matricula : {id.matricula}</p>
                   </div>
                 </div>
               </div>

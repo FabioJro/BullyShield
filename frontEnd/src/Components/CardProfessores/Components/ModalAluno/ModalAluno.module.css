@@ -30,6 +30,12 @@
   padding-top: 0.5rem;
   display: flex;
   justify-content: center;
+  
+}
+h2 {
+  font-size: 1rem; 
+  margin: 0;
+  padding: 0.5rem;
 }
 
 .fecharModal {
@@ -40,7 +46,7 @@
   height: 2rem;
   border: 1px solid;
   border-radius: 0.5rem;
-  color: #ffc34d;
+  color: #2b0d7c;
 }
 
 .fecharModal:hover {
@@ -52,7 +58,7 @@
 .historico {
   display: flex;
   justify-content: center;
-  background-color: #ffc34d;
+  background-color: #607af3;
   text-align: center;
   border-radius: 1rem;
 }
@@ -70,7 +76,7 @@
   height: 2rem;
   padding-left: 0.5rem;
   border-bottom-style: solid;
-  border-bottom-color: #ffc34d;
+  border-bottom-color: #2b0d7c;
 }
 
 .info {
@@ -80,14 +86,19 @@
 
 .modalInfo {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
+  align-items: center; 
   text-align: center;
-  background-color: #ffc34d;
+  background-color: #607af3;
   width: 34rem;
   border-radius: 2rem;
   height: 2rem;
-  padding-left: 0.5rem;
-  align-items: center;
+  padding: 0.5rem; 
+  box-sizing: border-box; 
+}
+
+.modalInfo > * {
+  margin: 0 0.5rem; 
 }
 
 .modalDisciplina {
@@ -121,7 +132,6 @@
 
 @media (max-width: 1920px) {
   .fecharModal {
-    
     right: 36%;
   }
 }
@@ -224,7 +234,8 @@
   }
 
   .historico,
-  .modalInfo,.modalAluno {
+  .modalInfo,
+  .modalAluno {
     font-size: 0.8rem;
   }
 }
