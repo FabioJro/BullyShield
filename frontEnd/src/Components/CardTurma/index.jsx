@@ -24,49 +24,49 @@ const index = () => {
           numberOfDisciplines: 4
         },
         {
-          teamName: 'Turma B',
-          teamGlbAvg: 5.5,
-          teamFqcAvg: 90,
-          enrolledStudents: 25,
-          numberOfDisciplines: 4
-        },
-        {
-          teamName: 'Turma B',
-          teamGlbAvg: 5.5,
-          teamFqcAvg: 90,
-          enrolledStudents: 25,
-          numberOfDisciplines: 4
-        },
-        {
-          teamName: 'Turma B',
-          teamGlbAvg: 5.5,
-          teamFqcAvg: 90,
-          enrolledStudents: 25,
-          numberOfDisciplines: 4
-        },
-        {
-          teamName: 'Turma B',
-          teamGlbAvg: 5.5,
-          teamFqcAvg: 90,
-          enrolledStudents: 25,
-          numberOfDisciplines: 4
-        },
-        {
-          teamName: 'Turma B',
-          teamGlbAvg: 5.5,
-          teamFqcAvg: 90,
-          enrolledStudents: 25,
-          numberOfDisciplines: 4
-        },
-        {
-          teamName: 'Turma B',
-          teamGlbAvg: 5.5,
-          teamFqcAvg: 90,
-          enrolledStudents: 25,
-          numberOfDisciplines: 4
-        },
-        {
           teamName: 'Turma C',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma D',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma E',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma F',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma G',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma H',
+          teamGlbAvg: 5.5,
+          teamFqcAvg: 90,
+          enrolledStudents: 25,
+          numberOfDisciplines: 4
+        },
+        {
+          teamName: 'Turma I',
           teamGlbAvg: 4.5,
           teamFqcAvg: 70,
           enrolledStudents: 20,
