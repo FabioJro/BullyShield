@@ -8,19 +8,23 @@ import axios from "axios";
 const index = () => {
   const [matricula, setMatricula] = useState(0);
   const [password, setPassword] = useState("");
+  const [incorreta, setIncorreta] = useState(false)
 
   const navigate = useNavigate();
- //oi
   const handleFunction = async(e) => {
   e.preventDefault();
-    const response =  await Authentication(matricula)
-    if (matricula){
-      
+  if (matricula){
+    if (password == "admin10"){
+      const response =  await Authentication(matricula)
       Cookies.set('user', matricula)
       navigate('/inicio')
-
+      }else{
+        setIncorreta(true)
+        setTimeout(()=>{
+          setIncorreta(false)
+        },4000)
+      }
     }
-    console.log(response);
   };
 
   return (
@@ -49,7 +53,9 @@ const index = () => {
             >
               Entrar
             </button>
+
           </div>
+            {incorreta && <p className={Style.passwordInc}>Matricula ou senha incorreta!</p>}
         </form>
       </section>
     </>
