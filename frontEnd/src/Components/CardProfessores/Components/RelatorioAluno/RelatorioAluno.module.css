@@ -22,6 +22,17 @@
   cursor: pointer;
 }
 
+.cardInformativo {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2b0d7c;
+  border-radius: 0.5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
 .alunoNome {
   width: 5rem;
   text-align: center;
@@ -39,8 +50,16 @@
   align-items: center;
 }
 
+.alunoFreq{
+  margin-right: 10px;
+}
+
 .aprovado {
   color: green;
+}
+
+.analise {
+  color: rgb(180, 164, 17);
 }
 
 .reprovado {
