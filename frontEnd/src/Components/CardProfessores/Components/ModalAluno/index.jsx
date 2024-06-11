@@ -166,7 +166,7 @@ const index = ({id, onClose}) => {
             <div className={Style.infoAluno}>
               <div className={Style.modalNome}>
                 <div className={Style.nome}>
-                  <p>{card.nome}</p>
+                  <p>{id.nome}</p>
                 </div>
                 <div className={Style.matricula}>
                   <p>Matricula : {card.matricula}</p>
