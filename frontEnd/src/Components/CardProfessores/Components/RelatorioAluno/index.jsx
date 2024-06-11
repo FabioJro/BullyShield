@@ -110,7 +110,7 @@ const index = () => {
         { nome: "Química", media: 6.5, frequencia: "60%" },
         { nome: "Biologia", media: 6.0, frequencia: "55%" }
       ]
-    },{
+    }, {
       nome: "Carla",
       matricula: 13579246,
       media: 7.0,
@@ -184,7 +184,7 @@ const index = () => {
         { nome: "Química", media: 8.0, frequencia: "75%" },
         { nome: "Biologia", media: 8.5, frequencia: "80%" }
       ]
-    },{
+    }, {
       nome: "Luisa",
       matricula: 95175328,
       media: 9.2,
@@ -230,18 +230,18 @@ const index = () => {
       ]
     }
   ]);
-const [modal, setModal] = useState(false)
-const [alunoEscolhido, setAlunoEscolhido]= useState('')
+  const [modal, setModal] = useState(false)
+  const [alunoEscolhido, setAlunoEscolhido] = useState('')
 
- 
-  const onClose=()=>{
+
+  const onClose = () => {
     setModal(false)
   }
-  const openModal =(id)=>{
+  const openModal = (id) => {
     setModal(true)
     setAlunoEscolhido(id)
   }
-const [filtroNome, setFiltroNome] = useState('');
+  const [filtroNome, setFiltroNome] = useState('');
   const [ordemMedia, setOrdemMedia] = useState('');
 
   const filtrarAlunos = () => {
@@ -268,7 +268,7 @@ const [filtroNome, setFiltroNome] = useState('');
 
   return (
     <section className={Style.containerBody}>
-  
+
       <section className={Style.bodyCard}>
         <div className={Style.containerSearch}>
           <div className={Style.input}>
@@ -289,9 +289,24 @@ const [filtroNome, setFiltroNome] = useState('');
           </div>
         </div>
         <section className={Style.containerAluno}>
+          <section className={Style.cardInformativo}>
+            <div className={Style.alunoNome} >
+              <p className={Style.info}>Nome</p>
+            </div>
+            <div className={Style.alunoMatricula}>
+              <p className={Style.info}>Matricula</p>
+            </div>
+            <div className={Style.alunoNota}>
+              <p className={Style.info}>Nota</p>
+            </div>
+            <div className={Style.alunoFreq}>
+              <p >Frequencia</p>
+            </div>
+          </section>
+
           {filtrarAlunos().map((aluno, index) => {
             return (
-              <section className={Style.cardAluno} onClick={()=>{openModal(aluno)}} key={index}>
+              <section className={Style.cardAluno} onClick={() => { openModal(aluno) }} key={index}>
                 <div className={Style.alunoNome}>
                   <p>{aluno.nome}</p>
                 </div>
@@ -302,7 +317,7 @@ const [filtroNome, setFiltroNome] = useState('');
                   <p className={Style.info}>
                     <span
                       className={
-                        aluno.media > 7 ? Style.aprovado : Style.reprovado
+                        aluno.media >= 7 ? Style.aprovado : aluno.media < 4 ? Style.reprovado : Style.analise
                       }
                     >
                       {aluno.media}
@@ -313,9 +328,12 @@ const [filtroNome, setFiltroNome] = useState('');
                   <p className={Style.info}>
                     <span
                       className={
-                        parseInt(aluno.frequencia) > 25
+                        parseInt(aluno.frequencia) >= 70
                           ? Style.aprovado
-                          : Style.reprovado
+                          :
+                          parseInt(aluno.frequencia) < 40
+                          ? Style.reprovado
+                          : Style.analise
                       }
                     >
                       {aluno.frequencia} %
@@ -328,7 +346,7 @@ const [filtroNome, setFiltroNome] = useState('');
         </section>
       </section>
       {modal && <ModalAluno id={alunoEscolhido} onClose={onClose} />}
-    </section>
+    </section >
   );
 };
 
