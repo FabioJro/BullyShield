@@ -18,28 +18,28 @@ const index = () => {
         },
         {
           teamName: 'Turma B',
-          teamGlbAvg: 5.5,
+          teamGlbAvg: 8.2,
           teamFqcAvg: 90,
           enrolledStudents: 25,
           numberOfDisciplines: 4
         },
         {
           teamName: 'Turma C',
-          teamGlbAvg: 5.5,
-          teamFqcAvg: 90,
+          teamGlbAvg: 9.4,
+          teamFqcAvg: 50,
           enrolledStudents: 25,
           numberOfDisciplines: 4
         },
         {
           teamName: 'Turma D',
-          teamGlbAvg: 5.5,
-          teamFqcAvg: 90,
-          enrolledStudents: 25,
+          teamGlbAvg: 5.2,
+          teamFqcAvg: 45,
+          enrolledStudents: 20,
           numberOfDisciplines: 4
         },
         {
           teamName: 'Turma E',
-          teamGlbAvg: 5.5,
+          teamGlbAvg: 7.5,
           teamFqcAvg: 90,
           enrolledStudents: 25,
           numberOfDisciplines: 4
@@ -53,23 +53,23 @@ const index = () => {
         },
         {
           teamName: 'Turma G',
-          teamGlbAvg: 5.5,
-          teamFqcAvg: 90,
-          enrolledStudents: 25,
+          teamGlbAvg: 7.8,
+          teamFqcAvg: 80,
+          enrolledStudents: 15,
           numberOfDisciplines: 4
         },
         {
           teamName: 'Turma H',
-          teamGlbAvg: 5.5,
-          teamFqcAvg: 90,
-          enrolledStudents: 25,
+          teamGlbAvg: 9.2,
+          teamFqcAvg: 100,
+          enrolledStudents: 19,
           numberOfDisciplines: 4
         },
         {
           teamName: 'Turma I',
-          teamGlbAvg: 4.5,
-          teamFqcAvg: 70,
-          enrolledStudents: 20,
+          teamGlbAvg: 8.3,
+          teamFqcAvg: 50,
+          enrolledStudents: 23,
           numberOfDisciplines: 3
         }
       ]);
